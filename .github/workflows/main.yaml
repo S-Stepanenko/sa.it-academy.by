@@ -1,16 +1,12 @@
-naim: CI
-
+name: CI
 on: [push]
 
 jobs:
-        build:
-                runs-on: ubuntu-latest
-
-                steos:
-                - uses: actions/checkout@v1
-                - name: Run a one-line script
-                  run: ls -l
-                - name: Run a multi-line script
-                  run: 
-                     env
-                     date
+  build:
+     runs-on: ubuntu-latest
+     steps:
+       - uses: actions/chckout@v1
+         name: Run a one-line script
+         run: 
+          env
+          date
